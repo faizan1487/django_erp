@@ -2,8 +2,8 @@ import requests
 from django.shortcuts import render
 
 def item_list_view(request):
-    user_api_key = '4e7074f890507cb'
-    user_secret_key = 'c954faf5ff73d31'
+    user_api_key = ''
+    user_secret_key = ''
 
     headers = {
         'Authorization': f'token {user_api_key}:{user_secret_key}',
@@ -11,7 +11,7 @@ def item_list_view(request):
         'Accept': 'application/json'
     }
 
-    url = 'https://crm.alnafi.com/api/resource/Testing?fields=["*"]'
+    url = ''
 
     try:
         response = requests.get(url, headers=headers)
